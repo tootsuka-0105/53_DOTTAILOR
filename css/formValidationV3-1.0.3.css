@@ -1,0 +1,67 @@
+/*------------------------------------
+// Bootstrap Form Validation (for Bootstrap 3.x)
+// Ver: 1.0.3
+//
+// Author: ENTEREAL LLP
+// URL: http://www.entereal.co.jp/
+//------------------------------------ */
+/* Bug fix */
+.row > .input-group {
+	padding-right: 15px !important;
+	padding-left: 15px !important;
+}
+.form-control-feedback {
+	z-index: 10;
+}
+.form-group > div > .row > div > .input-group > .form-control-feedback {
+	right: 0;
+}
+
+
+/* Warning Alert message */
+.has-feedback .form-control {
+    padding-right: 12px !important;
+}
+.has-error.has-feedback .form-control {
+    padding-right: 42.5px !important;
+}
+
+
+.form-group .form-control-feedback {
+	display: none;
+}
+.form-group.has-feedback.has-error .form-control-feedback {
+	display: block !important;
+}
+.form-group .alert-msg {
+	display: none;
+	color: #A94442;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+/* Form Elements */
+::-webkit-input-placeholder {
+	color: #DDD !important;
+}
+:-moz-placeholder {
+	color: #DDD !important;
+}
+
+input[type=number],
+input[valCheck*=number] {
+	text-align: right;
+}
+
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=password],
+input[valCheck*=passwd],
+input[valCheck*=zip],
+input[valCheck*=tel],
+input[valCheck*=email],
+input[valCheck*=url],
+input[valCheck*=number] {
+	ime-mode: disabled;
+}

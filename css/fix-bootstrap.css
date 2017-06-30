@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* header */
+
+
+/* section */
+
+
+/* paragraph */
+p {
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
+
