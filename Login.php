@@ -1,5 +1,6 @@
 <?php
 	require_once('function.php');
+	include_once 'ChromePhp.php';
 	/* テキストに出力するためのコンバート処理 */
 	function raw_json_encode($input) {
 
@@ -29,6 +30,8 @@
 	if(isset($_GET['Password'])) {
 	      $ct_Password = $_GET['Password'];
 	  }
+	ChromePhp::log('ct_userCd：',$ct_userCd);
+	ChromePhp::log('ct_Password：',$ct_Password);
 	//NG
 	#$ct_userCd = "admin";
 	#$ct_Password = "password";
@@ -72,6 +75,7 @@
 	$pos = strpos($http_response_header[0], '200');
 	preg_match('/HTTP\/1\.[0|1|x] ([0-9]{3})/', $http_response_header[0], $matches);
 	$status_code = $matches[1];
+	ChromePhp::log('status_code：',$status_code);
 	switch ($status_code) {
 	    case '200':
 	        // 200の場合
@@ -93,6 +97,7 @@
 	}
 	echo json_encode($userData);
 
+	/*
 	//ファイル出力用処理（テキストファイル提示用）
 	$filename = './json.txt';
 	if (!file_exists($filename)) {
@@ -112,4 +117,5 @@
 	fwrite($fp, sprintf(raw_json_encode($userData)));
 
 	fclose($fp);
+	*/
 ?>
